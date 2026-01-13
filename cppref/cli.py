@@ -301,7 +301,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="cppref", description="Search cppreference.com std symbols")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    index_parser = subparsers.add_parser("regenerate-index", help="Generate the cppreference symbol index")
+    index_parser = subparsers.add_parser("index", help="Generate the cppreference symbol index")
     index_parser.add_argument("--status", action="store_true", help="Show index status")
     index_parser.set_defaults(func=run_index)
 
